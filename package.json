@@ -1,0 +1,29 @@
+{
+  "name": "aurumtrack-gold-price",
+  "version": "1.0.0",
+  "description": "2-Year Historical Gold Price Analytics Platform with strict query hygiene and MCP market analysis",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server/index.ts",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build": "npm run typecheck && npm run build:client && npm run build:server",
+    "start": "NODE_ENV=production node dist/server/server/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.0",
+    "supertest": "^7.0.0",
+    "@types/supertest": "^6.0.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  }
+}

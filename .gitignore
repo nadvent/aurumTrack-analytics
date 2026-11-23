@@ -1,0 +1,29 @@
+# Dependencies & build outputs
+node_modules/
+dist/
+coverage/
+
+# Local SQLite databases (contains hashed API key vault & generated prices)
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
+data/*.db
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# AI / agent local instructions
+**/GEMINI.md
+GEMINI.md
+.agents/
+
+# OS & editor clutter
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
